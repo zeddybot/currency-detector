@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html amp>
+<head>
+  <!-- Site made with 8b Website Builder v0.0.0.0, https://8b.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="generator" content="8b v0.0.0.0, 8b.com"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="/static/images/logo.ico" type="image/x-icon">
+  <meta name="description" content="">
+  <title>Currency Dectector</title>
+
+<link rel="canonical" href="/">
+ <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+{% raw %}
+ <style amp-custom>
+div,span,h1,h2,h3,h4,h5,h6,p,blockquote,a,ol,ul,li,figcaption,textarea,input{font: inherit;}*{box-sizing: border-box;outline: none;}*:focus{outline: none;}body{position: relative;font-style: normal;line-height: 1.5;color: #000000;}section{background-color: #ffffff;background-position: 50% 50%;background-repeat: no-repeat;background-size: cover;overflow: hidden;padding: 30px 0;}section,.container,.container-fluid{position: relative;word-wrap: break-word;}h1,h2,h3,h4,h5,h6{margin: 0;padding: 0;}p,li,blockquote{letter-spacing: 0.5px;line-height: 1.7;}ul,ol,blockquote,p{margin-bottom: 0;margin-top: 0;}a{cursor: pointer;}a,a:hover{text-decoration: none;}a.mbr-iconfont:hover{text-decoration: none;}h1,h2,h3,h4,h5,h6,.display-1,.display-2,.display-4,.display-5,.display-7{word-break: break-word;word-wrap: break-word;}b,strong{font-weight: bold;}blockquote{padding: 10px 0 10px 20px;position: relative;border-left: 3px solid;}input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,input:-webkit-autofill:active{transition-delay: 9999s;transition-property: background-color,color;}html,body{height: auto;min-height: 100vh;}.mbr-section-title{margin: 0;padding: 0;font-style: normal;line-height: 1.2;width: 100%;}.mbr-section-subtitle{line-height: 1.3;width: 100%;}.mbr-text{font-style: normal;line-height: 1.6;width: 100%;}.mbr-figure{align-self: center;}.btn{text-align: center;position: relative;margin: .4rem .8rem;font-weight: 700;border-width: 2px;border-style: solid;font-style: normal;white-space: normal;transition: all .2s ease-in-out,box-shadow 2s ease-in-out;display: inline-flex;align-items: center;justify-content: center;word-break: break-word;line-height: 1.5;letter-spacing: 1px;}.btn-form{padding: 1rem 2rem;}.btn-form:hover{cursor: pointer;}.note-popover .btn:after{display: none;}.card-title{margin: 0;}.card-img{border-radius: 0;width: auto;flex-shrink: 0;}.card-img img{width: 100%;}.card{position: relative;background-color: transparent;border: none;border-radius: 0;width: 100%;padding-left: 1rem;padding-right: 1rem;}@media (max-width: 767px){.card:not(.last-child){padding-bottom: 2rem;}} .card .card-wrapper{height: 100%;}@media (max-width: 767px){.card .card-wrapper{flex-direction: column;}} .card img{height: 100%;object-fit: cover;object-position: center;}@media (min-width: 992px){.lg-pb{padding-bottom: 3rem;}}@media (max-width: 991px){.md-pb{padding-bottom: 2rem;}}.card-inner,.items-list{display: flex;flex-direction: column;}.items-list{list-style-type: none;padding: 0;}.items-list .list-item{padding: 1rem 2rem;}.card-head{padding: 1.5rem 2rem;}.card-price-wrap{padding: 1rem 2rem;display: flex;flex-direction: column;}.card-button{padding: 1rem;margin: 0;}.gallery-img-wrap{position: relative;height: 100%;}.gallery-img-wrap:hover{cursor: pointer;}.gallery-img-wrap:hover .icon-wrap,.gallery-img-wrap:hover .caption-on-hover{opacity: 1;}.gallery-img-wrap:hover:after{opacity: .5;}.gallery-img-wrap amp-img{height: 100%;}.gallery-img-wrap:after{content: "";position: absolute;top: 0;bottom: 0;left: 0;right: 0;background: #000;opacity: 0;transition: opacity .3s;pointer-events: none;}.gallery-img-wrap .icon-wrap,.gallery-img-wrap .img-caption{position: absolute;z-index: 3;pointer-events: none;}.gallery-img-wrap .icon-wrap,.gallery-img-wrap .caption-on-hover{opacity: 0;transition: opacity .3s;}.gallery-img-wrap .icon-wrap{left: 50%;top: 50%;transform: translate(-50%,-50%);background-color: #fff;padding: .5rem;border-radius: 50%;}.gallery-img-wrap .img-caption{left: 0;right: 0;}.gallery-img-wrap .img-caption.caption-top{top: 0;}.gallery-img-wrap .img-caption.caption-bottom{bottom: 0;}.gallery-img-wrap .img-caption:after{content: "";position: absolute;top: 0;left: 0;right: 0;height: 100%;transition: opacity .3s;z-index: -1;pointer-events: none;}@media (max-width: 767px){.gallery-img-wrap:after,.gallery-img-wrap:hover:after,.gallery-img-wrap .icon-wrap{display: none;}.gallery-img-wrap .caption-on-hover{opacity: 1;}}.is-builder .gallery-img-wrap .icon-wrap{pointer-events: all;}.is-builder .gallery-img-wrap .img-caption > *{pointer-events: all;}.icons-list a{margin-right: 1rem;}.icons-list a:last-child{margin-right: 0;}.counter-container{position: relative;}.counter-container ol li{margin-bottom: 2rem;}.counter-container.stylizedCounters ol{counter-reset: section;}.counter-container.stylizedCounters ol li{z-index: 3;list-style: none;}.counter-container.stylizedCounters ol li:before{z-index: 2;position: absolute;left: 0px;counter-increment: section;content: counters(section,".") " ";text-align: center;margin: 0 10px;line-height: 37px;width: 40px;height: 40px;transition: all .2s;color: #232323;font-size: 25px;border-radius: 50%;font-weight: bold;}.timeline-wrap{position: relative;}.timeline-wrap .iconBackground{position: absolute;left: 50%;width: 20px;height: 20px;line-height: 30px;text-align: center;border-radius: 50%;font-size: 30px;display: inline-block;background-color: #232323;top: 20px;margin-left: -10px;}@media (max-width: 768px){.timeline-wrap .iconBackground{left: 0;}}.separline{position: relative;}@media (max-width: 768px){.separline:not(.last-child){padding-bottom: 2rem;}} .separline:before{position: absolute;content: "";width: 2px;background-color: #232323;left: calc(50% - 1px);height: calc(100% - 20px);top: 40px;}@media (max-width: 768px){.separline:before{left: 0;}}amp-image-lightbox a.control{position: absolute;width: 32px;height: 32px;right: 48px;top: 32px;z-index: 1000;}amp-image-lightbox a.control .close{position: relative;}amp-image-lightbox a.control .close:before,amp-image-lightbox a.control .close:after{position: absolute;left: 15px;content: ' ';height: 33px;width: 2px;background-color: #fff;}amp-image-lightbox a.control .close:before{transform: rotate(45deg);}amp-image-lightbox a.control .close:after{transform: rotate(-45deg);}.iconbox.iconfont-wrapper{cursor: pointer;}.iconbox.iconfont-wrapper svg{pointer-events: none;}.lightbox{background: rgba(0,0,0,0.8);width: 100%;height: 100%;position: absolute;display: flex;flex-direction: column;-webkit-align-items: center;align-items: center;-webkit-justify-content: center;justify-content: center;}.lightbox .video-block{width: 100%;}.hidden{visibility: hidden;}.super-hide{display: none;}.inactive{-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: none;-webkit-user-drag: none;user-drag: none;}.popover-content ul.show{min-height: 155px;}.mbr-white{color: #ffffff;}.mbr-black{color: #000000;}.align-left{text-align: left;}.align-left .list-item{justify-content: flex-start;}.align-center{text-align: center;}.align-center .list-item{justify-content: center;}.align-right{text-align: right;}.align-right .list-item{justify-content: flex-end;}@media (max-width: 767px){.align-left,.align-center,.align-right{text-align: center;}.align-left .list-item,.align-center .list-item,.align-right .list-item{justify-content: center;}}.mbr-light{font-weight: 300;}.mbr-regular{font-weight: 400;}.mbr-semibold{font-weight: 500;}.mbr-bold{font-weight: 700;}.mbr-section-btn{margin-left: -.8rem;margin-right: -.8rem;font-size: 0;}nav .mbr-section-btn{margin-left: 0rem;margin-right: 0rem;}.btn .mbr-iconfont,.btn.btn-sm .mbr-iconfont{cursor: pointer;margin-right: 0.5rem;}.btn.btn-md .mbr-iconfont,.btn.btn-md .mbr-iconfont{margin-right: 0.8rem;}[type="submit"]{-webkit-appearance: none;}.mbr-fullscreen .mbr-overlay{min-height: 100vh;}.mbr-fullscreen{display: flex;display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;align-items: center;-webkit-align-items: center;min-height: 100vh;padding-top: 3rem;padding-bottom: 3rem;}.mbr-overlay{bottom: 0;left: 0;position: absolute;right: 0;top: 0;z-index: 0;}.mbr-parallax-bg{bottom: 0;left: 0;opacity: .5;position: absolute;right: 0;top: 0;z-index: 0;background-position: 50% 50%;background-repeat: no-repeat;background-size: cover;}section.menu{min-height: 70px;}.menu-container{display: flex;justify-content: space-between;align-items: center;min-height: 70px;}@media (max-width: 991px){.menu-container{max-width: 100%;padding: 0 2rem;}} @media (max-width: 767px){.menu-container{padding: 0 1rem;}}.navbar{z-index: 100;width: 100%;}.navbar-fixed-top{position: fixed;top: 0;}.navbar-brand{display: flex;align-items: center;word-break: break-word;z-index: 1;}.navbar-logo{margin-right: .8rem;}@media (max-width: 767px){.navbar-logo amp-img{max-height: 55px;max-width: 55px;}}.navbar-caption-wrap{display: flex;}.navbar .navbar-collapse{display: flex;flex-basis: auto;align-items: center;justify-content: flex-end;}@media (max-width: 991px){.navbar .navbar-collapse{display: none;position: absolute;top: 0;right: 0;min-height: 100vh;padding: 70px 2rem 1rem;z-index: 1;}}@media (max-width: 991px){.navbar.opened .navbar-collapse.show,.navbar.opened .navbar-collapse.collapsing{display: block;}.is-builder .navbar-collapse{position: fixed;}}.navbar-nav{list-style-type: none;display: flex;flex-wrap: wrap;padding-left: 0;min-width: 10rem;}@media (max-width: 991px){.navbar-nav{flex-direction: column;}} .navbar-nav .mbr-iconfont{margin-right: .2rem;}.nav-item{word-break: break-all;}.nav-link{display: flex;align-items: center;justify-content: center;}.nav-link,.navbar-caption{transition: all 0.2s;letter-spacing: 1px;}.nav-dropdown .dropdown-menu{min-width: 10rem;padding-bottom: 1.25rem;padding-top: 1.25rem;position: absolute;left: 0;}.nav-dropdown .dropdown-menu .dropdown-item{line-height: 2;display: flex;justify-content: center;align-items: center;padding: .25rem 1.5rem;white-space: nowrap;}.nav-dropdown .dropdown-menu .dropdown{position: relative;}.dropdown-menu .dropdown:hover > .dropdown-menu{opacity: 1;pointer-events: all;}.nav-dropdown .dropdown-submenu{top: 0;left: 100%;margin: 0;}.nav-item.dropdown{position: relative;}.nav-item.dropdown .dropdown-menu{opacity: 0;pointer-events: none;}.nav-item.dropdown:hover > .dropdown-menu{opacity: 1;pointer-events: all;}.link.dropdown-toggle:after{content: '';margin-left: .25rem;border-top: 0.35em solid;border-right: 0.35em solid transparent;border-left: 0.35em solid transparent;border-bottom: 0;}.navbar .dropdown.open > .dropdown-menu{display: block;}@media (max-width: 991px){.is-builder .nav-dropdown .dropdown-menu{position: relative;}.nav-dropdown .dropdown-submenu{left: 0;}.dropdown-item{padding: .25rem 1.5rem;margin: 0;justify-content: center;}.dropdown-item:after{right: auto;}.navbar.opened .dropdown-menu{top: 0;}.dropdown-toggle[data-toggle="dropdown-submenu"]:after{content: '';margin-left: .25rem;border-top: .35em solid;border-right: .35em solid transparent;border-left: .35em solid transparent;border-bottom: 0;top: 55%;}}.navbar-buttons{display: flex;flex-wrap: wrap;align-items: center;justify-content: center;}@media (max-width: 991px){.navbar-buttons{flex-direction: column;}}.menu-social-list{display: flex;align-items: center;justify-content: center;flex-wrap: wrap;}.menu-social-list a{margin: 0 .5rem;}button.navbar-toggler{position: absolute;right: 20px;top: 25px;width: 31px;height: 20px;cursor: pointer;transition: all .2s;align-self: center;}.hamburger span{position: absolute;right: 0;width: 30px;height: 2px;border-right: 5px;}.hamburger span:nth-child(1){top: 0;transition: all .2s;}.hamburger span:nth-child(2){top: 8px;transition: all .15s;}.hamburger span:nth-child(3){top: 8px;transition: all .15s;}.hamburger span:nth-child(4){top: 16px;transition: all .2s;}nav.opened .navbar-toggler:not(.hide) .hamburger span:nth-child(1){top: 8px;width: 0;opacity: 0;right: 50%;transition: all .2s;}nav.opened .navbar-toggler:not(.hide) .hamburger span:nth-child(2){-webkit-transform: rotate(45deg);transform: rotate(45deg);transition: all .25s;}nav.opened .navbar-toggler:not(.hide) .hamburger span:nth-child(3){-webkit-transform: rotate(-45deg);transform: rotate(-45deg);transition: all .25s;}nav.opened .navbar-toggler:not(.hide) .hamburger span:nth-child(4){top: 8px;width: 0;opacity: 0;right: 50%;transition: all .2s;}.ampstart-btn.hamburger{position: absolute;top: 25px;right: 15px;margin-left: auto;width: 30px;height: 20px;background: none;border: none;cursor: pointer;z-index: 1000;}@media (min-width: 992px){.ampstart-btn,amp-sidebar{display: none;}.dropdown-menu .dropdown-toggle:after{content: '';border-bottom: 0.35em solid transparent;border-left: 0.35em solid;border-right: 0;border-top: 0.35em solid transparent;margin-left: 0.3rem;margin-top: -0.3077em;position: absolute;right: 1.1538em;top: 50%;}}.close-sidebar{width: 30px;height: 30px;position: relative;cursor: pointer;background-color: transparent;border: none;}.close-sidebar span{position: absolute;left: 0;width: 30px;height: 2px;border-right: 5px;}.close-sidebar span:nth-child(1){transform: rotate(45deg);}.close-sidebar span:nth-child(2){transform: rotate(-45deg);}.builder-sidebar{position: relative;min-height: 100vh;z-index: 1030;padding: 1rem 2rem;max-width: 20rem;}.builder-sidebar .dropdown:hover > .dropdown-menu{position: relative;text-align: center;}section.sidebar-open:before{content: '';position: fixed;top: 0;bottom: 0;right: 0;left: 0;background-color: rgba(0,0,0,0.2);z-index: 1040;}.map-placeholder{display: none;}.map-placeholder h4{padding-top: 5rem;color: #767676;text-align: center;}.google-map{position: relative;width: 100%;}@media (max-width: 992px){.google-map{padding: 0;margin: 0;}} .google-map [data-state-details]{color: #6b6763;font-family: Montserrat;height: 1.5em;margin-top: -0.75em;padding-left: 1.25rem;padding-right: 1.25rem;position: absolute;text-align: center;top: 50%;width: 100%;}.google-map[data-state]{background: #e9e5dc;}.google-map[data-state="loading"] [data-state-details]{display: none;}div[submit-success]{padding: 1rem;margin-bottom: 1rem;}div[submit-error]{padding: 1rem;margin-bottom: 1rem;}textarea[type="hidden"]{display: none;}amp-img{width: 100%;}amp-img img{max-height: 100%;max-width: 100%;}img.mbr-temp{width: 100%;}.rounded{border-radius: 50%;}.is-builder .nodisplay + img[async],.is-builder .nodisplay + img[decoding="async"],.is-builder amp-img > a + img[async],.is-builder amp-img > a + img[decoding="async"]{display: none;}html:not(.is-builder) amp-img > a{position: absolute;top: 0;bottom: 0;left: 0;right: 0;z-index: 1;}.is-builder .temp-amp-sizer{position: absolute;}.is-builder amp-youtube .temp-amp-sizer,.is-builder amp-vimeo .temp-amp-sizer{position: static;}.is-builder section.horizontal-menu .ampstart-btn{display: none;}.is-builder section.horizontal-menu .dropdown-menu{z-index: auto;opacity: 1;pointer-events: auto;}.is-builder section.horizontal-menu .nav-dropdown .link.dropdown-toggle[aria-expanded="true"]{margin-right: 0;padding: 0.667em 1em;}div.placeholder{z-index: 4;background: rgba(255,255,255,0.5);}div.placeholder svg{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);width: 20%;height: auto;}div.placeholder svg circle.big{animation: big-anim 3s linear infinite;}div.placeholder svg circle.small{animation: small-anim 1.5s linear infinite;}@keyframes big-anim{from{stroke-dashoffset: 900;}to{stroke-dashoffset: 0;}}@keyframes small-anim{from{stroke-dashoffset: 850;}to{stroke-dashoffset: 0;}}.placeholder-loader .amp-active > div{display: none;}.container{padding-right: 1rem;padding-left: 1rem;width: 100%;margin-right: auto;margin-left: auto;}@media (max-width: 767px){.container{max-width: 540px;}} @media (min-width: 768px){.container{max-width: 720px;}} @media (min-width: 992px){.container{max-width: 960px;}} @media (min-width: 1200px){.container{max-width: 1140px;}}.container-fluid{width: 100%;margin-right: auto;margin-left: auto;padding-left: 1rem;padding-right: 1rem;}.media-container-row{display: flex;flex-wrap: wrap;}@media (min-width: 992px){.media-container-row{flex-wrap: nowrap;}}.mbr-flex{display: flex;}.flex-wrap{flex-wrap: wrap;}.mbr-jc-s{justify-content: flex-start;}.mbr-jc-c{justify-content: center;}.mbr-jc-e{justify-content: flex-end;}.mbr-row{display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;margin-right: -1rem;margin-left: -1rem;}.mbr-row-reverse{flex-direction: row-reverse;}.mbr-column{flex-direction: column;}@media (max-width: 767px){.mbr-col-sm-12{-ms-flex: 0 0 100%;flex: 0 0 100%;max-width: 100%;padding-right: 1rem;padding-left: 1rem;}}@media (min-width: 768px){.mbr-col-md-3{-ms-flex: 0 0 25%;flex: 0 0 25%;max-width: 25%;padding-right: 1rem;padding-left: 1rem;}.mbr-col-md-4{-ms-flex: 0 0 33.333333%;flex: 0 0 33.333333%;max-width: 33.333333%;padding-right: 1rem;padding-left: 1rem;}.mbr-col-md-5{-ms-flex: 0 0 41.666667%;flex: 0 0 41.666667%;max-width: 41.666667%;padding-right: 1rem;padding-left: 1rem;}.mbr-col-md-6{-ms-flex: 0 0 50%;flex: 0 0 50%;max-width: 50%;padding-right: 1rem;padding-left: 1rem;}.mbr-col-md-7{-ms-flex: 0 0 58.333333%;flex: 0 0 58.333333%;max-width: 58.333333%;padding-right: 1rem;padding-left: 1rem;}.mbr-col-md-8{-ms-flex: 0 0 66.666667%;flex: 0 0 66.666667%;max-width: 66.666667%;padding-left: 1rem;padding-right: 1rem;}.mbr-col-md-10{-ms-flex: 0 0 83.333333%;flex: 0 0 83.333333%;max-width: 83.333333%;padding-left: 1rem;padding-right: 1rem;}.mbr-col-md-12{-ms-flex: 0 0 100%;flex: 0 0 100%;max-width: 100%;padding-right: 1rem;padding-left: 1rem;}}@media (min-width: 992px){.mbr-col-lg-2{-ms-flex: 0 0 16.666667%;flex: 0 0 16.666667%;max-width: 16.666667%;padding-right: 1rem;padding-left: 1rem;}.mbr-col-lg-3{-ms-flex: 0 0 25%;flex: 0 0 25%;max-width: 25%;padding-right: 1rem;padding-left: 1rem;}.mbr-col-lg-4{-ms-flex: 0 0 33.33%;flex: 0 0 33.33%;max-width: 33.33%;padding-right: 1rem;padding-left: 1rem;}.mbr-col-lg-5{-ms-flex: 0 0 41.666%;flex: 0 0 41.666%;max-width: 41.666%;padding-right: 1rem;padding-left: 1rem;}.mbr-col-lg-6{-ms-flex: 0 0 50%;flex: 0 0 50%;max-width: 50%;padding-right: 1rem;padding-left: 1rem;}.mbr-col-lg-7{-ms-flex: 0 0 58.333333%;flex: 0 0 58.333333%;max-width: 58.333333%;padding-right: 1rem;padding-left: 1rem;}.mbr-col-lg-8{-ms-flex: 0 0 66.666667%;flex: 0 0 66.666667%;max-width: 66.666667%;padding-left: 1rem;padding-right: 1rem;}.mbr-col-lg-9{-ms-flex: 0 0 75%;flex: 0 0 75%;max-width: 75%;padding-left: 1rem;padding-right: 1rem;}.mbr-col-lg-10{-ms-flex: 0 0 83.3333%;flex: 0 0 83.3333%;max-width: 83.3333%;padding-right: 1rem;padding-left: 1rem;}.mbr-col-lg-12{-ms-flex: 0 0 100%;flex: 0 0 100%;max-width: 100%;padding-right: 1rem;padding-left: 1rem;}}@media (min-width: 1200px){.mbr-col-xl-7{-ms-flex: 0 0 58.333333%;flex: 0 0 58.333333%;max-width: 58.333333%;padding-right: 1rem;padding-left: 1rem;}.mbr-col-xl-4{-ms-flex: 0 0 33.333333%;flex: 0 0 33.333333%;max-width: 33.333333%;padding-right: 1rem;padding-left: 1rem;}.mbr-col-xl-8{-ms-flex: 0 0 66.666667%;flex: 0 0 66.666667%;max-width: 66.666667%;padding-left: 1rem;padding-right: 1rem;}.mbr-col-xl-5{-ms-flex: 0 0 41.666667%;flex: 0 0 41.666667%;max-width: 41.666667%;}}.mbr-pt-1{padding-top: .5rem;}.mbr-pt-2{padding-top: 1rem;}.mbr-pt-3{padding-top: 1.5rem;}.mbr-pt-4{padding-top: 2rem;}.mbr-pt-5{padding-top: 3rem;}.mbr-pb-1{padding-bottom: .5rem;}.mbr-pb-2{padding-bottom: 1rem;}.mbr-pb-3{padding-bottom: 1.5rem;}.mbr-pb-4{padding-bottom: 2rem;}.mbr-pb-5{padding-bottom: 3rem;}.mbr-px-1{padding-left: .5rem;padding-right: .5rem;}.mbr-px-2{padding-left: 1rem;padding-right: 1rem;}.mbr-px-3{padding-left: 1.5rem;padding-right: 1.5rem;}.mbr-px-4{padding-left: 2rem;padding-right: 2rem;}@media (max-width: 991px){.mbr-px-4{padding-left: 1rem;padding-right: 1rem;}}.mbr-px-5{padding-left: 3rem;padding-right: 3rem;}@media (max-width: 991px){.mbr-px-5{padding-left: 1rem;padding-right: 1rem;}}.mbr-m-sub-1{margin-left: -1rem;margin-right: -1rem;}@media (max-width: 768px){.mbr-m-sub-1{margin-left: 0;margin-right: 0;}}.mbr-py-1{padding-top: .5rem;padding-bottom: .5rem;}.mbr-py-2{padding-top: 1rem;padding-bottom: 1rem;}@media (max-width: 767px){.mbr-py-2{padding-top: 0rem;padding-bottom: 0rem;}}.mbr-py-3{padding-top: 1.5rem;padding-bottom: 1.5rem;}@media (max-width: 991px){.mbr-py-3{padding-top: 1rem;padding-bottom: 1rem;}}.mbr-py-4{padding-top: 2rem;padding-bottom: 2rem;}@media (max-width: 991px){.mbr-py-4{padding-top: 1rem;padding-bottom: 1rem;}}.mbr-py-5{padding-top: 3rem;padding-bottom: 3rem;}@media (max-width: 991px){.mbr-py-5{padding-top: 1rem;padding-bottom: 1rem;}}.mbr-p-1{padding: .5rem;}.mbr-p-2{padding: 1rem;}.mbr-p-3{padding: 1.5rem;}@media (max-width: 991px){.mbr-p-3{padding: 1rem;}}.mbr-p-4{padding: 2rem;}@media (max-width: 991px){.mbr-p-4{padding: 1rem;}}.mbr-p-5{padding: 3rem;}@media (max-width: 991px){.mbr-p-5{padding: 1rem;}}.mbr-ml-auto{margin-left: auto;}.mbr-mr-auto{margin-right: auto;}.mbr-m-auto{margin: auto;}.form-block{z-index: 1;background-color: transparent;padding: 3rem;position: relative;overflow: visible;}.form-block .mbr-overlay{z-index: -1;}@media (max-width: 992px){.form-block{padding: 1rem;}} .form-block input,.form-block textarea{border-radius: 0;background-color: #ffffff;margin: 0;transition: 0.4s;width: 100%;border: 1px solid #e0e0e0;padding: 11px 1rem;}form .fieldset{display: flex;justify-content: center;flex-wrap: wrap;align-items: center;}.field{flex-basis: auto;flex-grow: 1;flex-shrink: 1;padding: 0.5rem;}@media (max-width: 768px){.field{flex-basis: 100%;}}textarea{width: 100%;margin-right: 0;}.text-field{flex-basis: 100%;flex-grow: 1rem;flex-shrink: 1;padding: 0.5rem;}amp-img,img{height: 100%;width: 100%;}amp-sidebar{background: transparent;}.is-builder .menu{overflow: visible;}.is-builder .preview button{opacity: 0.5;position: relative;pointer-events: none;}.is-builder .preview button:before{display: block;position: absolute;content: '';background-color: #efefef;left: 0;right: 0;top: 0;bottom: 0;z-index: 2;}.hidden-slide{display: none;}.visible-slide{display: flex;}.dots-wrapper .dots{margin: 4px 8px;}.dots-wrapper .dots span{cursor: pointer;border-radius: 12px;display: block;height: 24px;width: 24px;transition: 0.4s;border: 10px solid #cccccc;}.dots-wrapper .dots span:hover{opacity: 1;}.dots-wrapper .dots span.current{outline: none;width: 40px;opacity: 1;}.amp-carousel-button{outline: none;border-radius: 50%;border: 10px transparent solid;transform: scale(1.5) translateY(-50%);height: 45px;width: 45px;transition: 0.4s;cursor: pointer;}.amp-carousel-button:hover{opacity: 1;}.amp-carousel-button-next{background-position: 75% 50%;}.amp-carousel-button-prev{background-position: 25% 50%;}button.btn-img{cursor: pointer;}.iconfont-wrapper{display: inline-block;width: 1.5rem;height: 1.5rem;}.amp-iconfont{vertical-align: middle;width: 1.5rem;height: 100%;font-size: 1.5rem;}#freeversion-wrapper{position: relative;z-index: 1000;}@media (max-width: 767px){#freeversion-wrapper{position: sticky;bottom: 0;}}#freeversion{text-align: center;display: flex;background-color: #fff;border-top: 2px solid #efefef;border-left: 1px solid #efefef;bottom: 0;right: 0;justify-content: center;padding: 1rem;}@media (min-width: 768px){#freeversion{position: fixed;}} #freeversion > *{display: flex;align-self: center;}@media (max-width: 767px){#freeversion{width: 100%;}} #freeversion .freeversion{color: #000;}@media (min-width: 768px){#freeversion .freeversion{max-width: 160px;}} #freeversion .btn-wrap .btn{padding: 5px;white-space: nowrap;}@media (max-width: 992px){#freeversion .btn-wrap .btn{margin: 0;white-space: normal;}} @media (max-width: 992px){#freeversion > *,#freeversion .btn-wrap .btn{padding: 5px;}}
+body{line-height: 1.5;}section{color: #615779;}h1,h2,h3,h4,h5,h6{letter-spacing: 0.68px;}p,li,blockquote{letter-spacing: 0.68px;line-height: 1.7;}body{font-family: Didact Gothic;}blockquote{border-color: #fac769;}div[submit-success]{background: #66458e;}div[submit-error]{background: #66458e;}.display-1{font-family: 'Poppins',sans-serif;font-size: 3.7rem;line-height: 1.1em;}.display-2{font-family: 'Roboto',sans-serif;font-size: 2.9rem;line-height: 1.2;}.display-4{font-family: 'Roboto',sans-serif;font-size: 0.8rem;line-height: 1.7;}.display-5{font-family: 'Roboto',sans-serif;font-size: 1.4rem;line-height: 1.3;}.display-7{font-family: 'Roboto',sans-serif;font-size: 1rem;line-height: 1.9;}.form-block input,.form-block textarea{font-family: 'Roboto',sans-serif;font-size: 1rem;}.display-1 .mbr-iconfont-btn{font-size: 3.7rem;width: 3.7rem;}.display-2 .mbr-iconfont-btn{font-size: 2.9rem;width: 2.9rem;}.display-4 .mbr-iconfont-btn{font-size: 0.8rem;width: 0.8rem;}.display-5 .mbr-iconfont-btn{font-size: 1.4rem;width: 1.4rem;}.display-7 .mbr-iconfont-btn{font-size: 1rem;width: 1rem;}@media (max-width: 991px){.display-1,.display-1 .mbr-iconfont-btn{font-size: calc( 1.4800000000000002rem * 1.8);}.display-1 .mbr-iconfont-btn{width: calc( 1.4800000000000002rem * 1.8);}.display-2,.display-2 .mbr-iconfont-btn{font-size: calc( 1.3679999999999999rem * 1.5);}.display-2 .mbr-iconfont-btn{width: calc( 1.3679999999999999rem * 1.5);}.display-5,.display-5 .mbr-iconfont-btn{font-size: calc( 1rem * 0.9);}.display-5 .mbr-iconfont-btn{width: calc( 1rem * 0.9);}.display-7,.display-7 .mbr-iconfont-btn{font-size: calc( 1rem * 0.9);}.display-7 .mbr-iconfont-btn{width: calc( 1rem * 0.9);}.display-4,.display-4 .mbr-iconfont-btn{font-size: calc( 0.8rem * 0.9);}.display-4 .mbr-iconfont-btn{width: calc( 0.8rem * 0.9);}}@media (max-width: 991px) and (max-width: 767px){.display-1,.display-1 .mbr-iconfont-btn{font-size: 1.48rem;}}@media (max-width: 991px) and (max-width: 767px){.display-1 .mbr-iconfont-btn{width: 1.48rem;}}.btn{padding: 15px 22px;border-radius: 0px;line-height: 14px;}.btn-sm{padding: 14px 20px;border-radius: 0px;line-height: 12px;}.btn-md{padding: 15px 22px;border-radius: 0px;line-height: 14px;}.btn-lg{padding: 20px 40px;border-radius: 0;line-height: 14px;}.bg-primary{background-color: #fac769;}.bg-success{background-color: #66458e;}.bg-info{background-color: #a65b8d;}.bg-warning{background-color: #f2eeef;}.bg-danger{background-color: #66458e;}.btn-secondary,.btn-secondary:active,.btn-secondary.active{background-color: #770c24;border-color: #770c24;color: #ffffff;}.btn-secondary:hover,.btn-secondary:focus,.btn-secondary.focus,.btn-secondary.disabled,.btn-secondary:disabled{background-color: transparent;border-color: #770c24;color: #770c24;}.btn-info,.btn-info:active,.btn-info.active{background-color: #a65b8d;border-color: #a65b8d;color: #ffffff;}.btn-info:hover,.btn-info:focus,.btn-info.focus,.btn-info.disabled,.btn-info:disabled{background-color: transparent;border-color: #a65b8d;color: #a65b8d;}.btn-success,.btn-success:active,.btn-success.active{background-color: #66458e;border-color: #66458e;color: #ffffff;}.btn-success:hover,.btn-success:focus,.btn-success.focus,.btn-success.disabled,.btn-success:disabled{background-color: transparent;border-color: #66458e;color: #66458e;}.btn-warning,.btn-warning:active,.btn-warning.active{background-color: #f2eeef;border-color: #f2eeef;color: #7f6269;}.btn-warning:hover,.btn-warning:focus,.btn-warning.focus,.btn-warning.disabled,.btn-warning:disabled{background-color: transparent;border-color: #f2eeef;color: #f2eeef;}.btn-danger,.btn-danger:active,.btn-danger.active{background-color: #66458e;border-color: #66458e;color: #ffffff;}.btn-danger:hover,.btn-danger:focus,.btn-danger.focus,.btn-danger.disabled,.btn-danger:disabled{background-color: transparent;border-color: #66458e;color: #66458e;}.btn-primary,.btn-primary:active,.btn-primary.active{background-color: #fac769;border-color: #fac769;color: #614003;}.btn-primary:hover,.btn-primary:focus,.btn-primary.focus,.btn-primary.disabled,.btn-primary:disabled{background-color: transparent;border-color: #fac769;color: #fac769;}.btn-black,.btn-black:active,.btn-black.active{background-color: #222222;border-color: #222222;color: #ffffff;}.btn-black:hover,.btn-black:focus,.btn-black.focus,.btn-black.disabled,.btn-black:disabled{background-color: transparent;border-color: #222222;color: #222222;}.btn-white,.btn-white:active,.btn-white.active{background-color: #ffffff;border-color: #ffffff;color: #808080;}.btn-white:hover,.btn-white:focus,.btn-white.focus,.btn-white.disabled,.btn-white:disabled{background-color: transparent;border-color: #ffffff;color: #ffffff;}.btn-primary-outline,.btn-primary-outline:active,.btn-primary-outline.active,.btn-primary-outline:hover,.btn-primary-outline:focus,.btn-primary-outline.focus,.btn-primary-outline.disabled,.btn-primary-outline:disabled{background: none;padding: 0;border: none;color: #fac769;border-bottom: 2px solid #fac769;}.btn-secondary-outline,.btn-secondary-outline:active,.btn-secondary-outline.active,.btn-secondary-outline:hover,.btn-secondary-outline:focus,.btn-secondary-outline.focus,.btn-secondary-outline.disabled,.btn-secondary-outline:disabled{background: none;padding: 0;border: none;color: #770c24;border-bottom: 2px solid #770c24;}.btn-info-outline,.btn-info-outline:active,.btn-info-outline.active,.btn-info-outline:hover,.btn-info-outline:focus,.btn-info-outline.focus,.btn-info-outline.disabled,.btn-info-outline:disabled{background: none;padding: 0;border: none;color: #a65b8d;border-bottom: 2px solid #a65b8d;}.btn-success-outline,.btn-success-outline:active,.btn-success-outline.active,.btn-success-outline:hover,.btn-success-outline:focus,.btn-success-outline.focus,.btn-success-outline.disabled,.btn-success-outline:disabled{background: none;padding: 0;border: none;color: #66458e;border-bottom: 2px solid #66458e;}.btn-warning-outline,.btn-warning-outline:active,.btn-warning-outline.active,.btn-warning-outline:hover,.btn-warning-outline:focus,.btn-warning-outline.focus,.btn-warning-outline.disabled,.btn-warning-outline:disabled{background: none;padding: 0;border: none;color: #f2eeef;border-bottom: 2px solid #f2eeef;}.btn-danger-outline,.btn-danger-outline:active,.btn-danger-outline.active,.btn-danger-outline:hover,.btn-danger-outline:focus,.btn-danger-outline.focus,.btn-danger-outline.disabled,.btn-danger-outline:disabled{background: none;padding: 0;border: none;color: #66458e;border-bottom: 2px solid #66458e;}.btn-black-outline,.btn-black-outline:active,.btn-black-outline.active,.btn-black-outline:hover,.btn-black-outline:focus,.btn-black-outline.focus,.btn-black-outline.disabled,.btn-black-outline:disabled{background: none;padding: 0;border: none;color: #222222;border-bottom: 2px solid #222222;}.btn-white-outline,.btn-white-outline:active,.btn-white-outline.active,.btn-white-outline:hover,.btn-white-outline:focus,.btn-white-outline.focus,.btn-white-outline.disabled,.btn-white-outline:disabled{background: none;padding: 0;border: none;color: #ffffff;border-bottom: 2px solid #ffffff;}.text-primary{color: #fac769;}.text-secondary{color: #770c24;}.text-success{color: #66458e;}.text-info{color: #a65b8d;}.text-warning{color: #f2eeef;}.text-danger{color: #66458e;}.text-white{color: #ffffff;}.text-black{color: #222222;}a[class*="text-"],.amp-iconfont,.iconfont-wrapper,.mbr-iconfont{transition: 0.2s ease-in-out;}.amp-iconfont,.mbr-iconfont{color: #fac769;}.icons-list .iconfont-wrapper{width: 2.7rem;height: 2.7rem;}section[class*="team"] .icons-list .iconfont-wrapper,section[class*="contacts"] .icons-list .iconfont-wrapper{border-radius: 50%;margin-bottom: 10px;border: 2px solid #fac769;background-color: #fac769;display: inline-flex;justify-content: center;}section[class*="team"] .icons-list .iconfont-wrapper .amp-iconfont,section[class*="contacts"] .icons-list .iconfont-wrapper .amp-iconfont{color: #614003;font-size: calc(2.7rem * 0.42);width: calc(2.7rem * 0.42);align-self: center;height: unset;}@media (max-width: 991px){section[class*="team"] .icons-list .iconfont-wrapper,section[class*="contacts"] .icons-list .iconfont-wrapper{width: 30px;height: 30px;}section[class*="team"] .icons-list .iconfont-wrapper .amp-iconfont,section[class*="contacts"] .icons-list .iconfont-wrapper .amp-iconfont{font-size: calc(30px * 0.42);width: calc(30px * 0.42);}}section[class*="team"] .icons-list .iconfont-wrapper:hover,section[class*="contacts"] .icons-list .iconfont-wrapper:hover{background: transparent;}section[class*="team"] .icons-list .iconfont-wrapper:hover .amp-iconfont,section[class*="contacts"] .icons-list .iconfont-wrapper:hover .amp-iconfont{color: #fac769;}a[class*="text-"]:hover,a[class*="text-"]:focus{color: #fac769;}.mbr-semibold{font-weight: 600;}.amp-carousel-button{background-color: #fac769;}.dots span{border-color: #fac769;}.dots-wrapper{position: absolute;bottom: 0;left: 50%;transform: translateX(-50%);z-index: 11;border-radius: 16px;}.dots-wrapper .dots{margin: 0 3px;}.dots-wrapper .dots span{display: inline-block;vertical-align: middle;border-radius: 10px;border: 4.5px solid;width: 9px;height: 0;opacity: 0.4;outline: none;}.dots-wrapper .dots span.current{opacity: 1;width: 18px;}.form-block input,.form-block textarea{padding: 6px 10px;line-height: 30px;margin-bottom: 20px;width: 100%;background: #fff;border: 1px solid #e0e0e0;}.text-field,.field{padding: 0 1rem;}.nav-dropdown .nav-item .dropdown-toggle:after{content: '';margin-left: .25rem;width: 5px;height: 5px;border: none;border-top: 1px solid;border-right: 1px solid;transform: rotate(45deg);-webkit-transition: all 0.2s ease;transition: all 0.2s ease;}.nav-dropdown .nav-item:hover .dropdown-toggle:after{transform: rotate(135deg);}.nav-dropdown .dropdown-menu{padding-bottom: 0;padding-top: 0;}.nav-dropdown .dropdown-menu .dropdown-item{padding: 0 30px;line-height: 50px;}@media (max-width: 991px){.nav-dropdown .dropdown-menu .dropdown-item{padding: 0 15px;margin: 0 20px;}}.dropdown-item{position: relative;}.dropdown-item:before{content: "";position: absolute;left: -1rem;top: 50%;transform: translateY(-50%) rotate(45deg);opacity: 0;margin-right: 1rem;width: 5px;height: 5px;border-top: 1px solid #fac769;border-right: 1px solid #fac769;}.dropdown-item,.dropdown-item:before{-webkit-transition: all .3s;transition: all .3s;}.nav-item:hover .nav-link,.nav-item:hover .dropdown-item:hover{color: #fac769;}.nav-item:hover .nav-link:after{border-color: #fac769;}.dropdown-item,.nav-item:not(:last-child) .nav-link{border-bottom: 1px solid #bec1c7;}@media (min-width: 992px){.navbar-nav .nav-item .dropdown-item:hover{background-color: #770c24;color: #ffffff;padding: 0 30px 0 50px;}.navbar-nav .nav-item .dropdown-item:hover:before{left: 30px;opacity: 1;}.navbar-nav .nav-item .nav-link{border: none;}.dropdown-menu .dropdown-item{border-color: #e4e5ee;}.dropdown-menu .dropdown-item:last-child{border: none;}}@media (max-width: 991px){.dropdown:hover .nav-link{background-color: #770c24;color: #ffffff;}.dropdown:hover .nav-link:after{border-color: #ffffff;}.nav-link{margin: 0;padding: 0 1rem;width: 100%;line-height: 50px;}}.alert-success{background-color: #66458e;}.alert-info{background-color: #a65b8d;}.alert-warning{background-color: #f2eeef;}.alert-danger{background-color: #66458e;}.mbr-plan-header.bg-primary .mbr-plan-subtitle,.mbr-plan-header.bg-primary .mbr-plan-price-desc{color: #ffffff;}.mbr-plan-header.bg-success .mbr-plan-subtitle,.mbr-plan-header.bg-success .mbr-plan-price-desc{color: #a68cc7;}.mbr-plan-header.bg-info .mbr-plan-subtitle,.mbr-plan-header.bg-info .mbr-plan-price-desc{color: #d3aec6;}.mbr-plan-header.bg-warning .mbr-plan-subtitle,.mbr-plan-header.bg-warning .mbr-plan-price-desc{color: #ffffff;}.mbr-plan-header.bg-danger .mbr-plan-subtitle,.mbr-plan-header.bg-danger .mbr-plan-price-desc{color: #a68cc7;}.mobirise-spinner em:nth-child(1){background: #fac769;}.mobirise-spinner em:nth-child(2){background: #770c24;}.mobirise-spinner em:nth-child(3){background: #66458e;}.amp-carousel-button{width: 35px;height: 35px;background-position: 50% 50%;}.progress-value,.price-caption{color: #770c24;}.element-subtitle,.text-content .mbr-content-subtitle,.milestone .numeral,.mbr-section-subtitle:not(.mbr-white),.card-subtitle,.card-benefits-box,.progress_value,.form-subtitle,.contacts-subtitle,.price-value,.price-sign{color: #fac769;}.card-category,.card-date,.card-info{color: #f2eeef;}.features3 .card-img amp-img{position: relative;}.features3 .card-img amp-img:before,.features3 .card-img amp-img a:before{position: absolute;transition: opacity 0.2s ease;pointer-events: none;opacity: 0;}.features3 .card-img amp-img:before{content: "";height: 100%;width: 100%;z-index: 1;background-color: rgba(0,0,0,0.5);}.features3 .card-img amp-img a:before{content: "＋";top: 50%;left: 50%;font-size: 40px;transform: translate(-50%,-50%);color: #fff;z-index: 2;}@media (min-width: 768px){.features3 .card-img:hover amp-img:before,.features3 .card-img:hover amp-img a:before{opacity: 1;}}@media (max-width: 767px){.features3 .card-img amp-img:before{opacity: 0.3;}.features3 .card-img amp-img a:before{opacity: 1;}}.testimonials1 .card-wrapper img{object-fit: cover;transition: transform 5s linear;}.testimonials1 .card-wrapper:hover img{transform: scale(1.15);}.testimonials1 amp-img{z-index: 2;}.cid-r5cH5HY9ZD{background-color: #f2eeef;overflow: visible;}.cid-r5cH5HY9ZD .navbar{background: #f2eeef;display: flex;}.cid-r5cH5HY9ZD .navbar-caption{line-height: inherit;}@media (max-width: 991px){.cid-r5cH5HY9ZD .navbar .navbar-collapse{background: #f2eeef;}}.cid-r5cH5HY9ZD .nav-link{margin: .667em 1em;padding: 0;}.cid-r5cH5HY9ZD .dropdown-menu{background: #f2eeef;}.cid-r5cH5HY9ZD .hamburger span{background-color: #a65b8d;}.cid-r5cH5HY9ZD .builder-sidebar{background-color: #f2eeef;}.cid-r5cH5HY9ZD .close-sidebar:focus{outline: 2px auto #fac769;}.cid-r5cH5HY9ZD .close-sidebar span{background-color: #a65b8d;}.cid-raG5GtYh47{padding-top: 15rem;padding-bottom: 10rem;background-image: url("/static/images/header-background.jpg");align-items: center;display: flex;}.cid-raG5GtYh47 .mbr-overlay{background: #2f2447;opacity: 0.6;}.cid-r5cTcPLIY5{padding-top: 5rem;padding-bottom: 5rem;background-color: #9c88bc;}.cid-r5cTcPLIY5 .second-element-box,.cid-r5cTcPLIY5 .container-elements{width: 100%;}.cid-r5cTcPLIY5 .container-elements,.cid-r5cTcPLIY5 .second-element,.cid-r5cTcPLIY5 .image-wrap{position: relative;}@media (min-width: 992px){.cid-r5cTcPLIY5 .second-element{padding-right: 70px;}}.cid-r5cTcPLIY5 amp-img,.cid-r5cTcPLIY5 img{object-fit: cover;}@media (min-width: 768px){.cid-r5cTcPLIY5 amp-img,.cid-r5cTcPLIY5 img{height: 32rem;}}@media (min-width: 768px){.cid-r5cTcPLIY5 .milestone > div:not(:first-child){border-left: 1px solid #f2eeef;}.cid-r5cTcPLIY5 .milestone > div:nth-child(2n+1){border-left: none;}.cid-r5cTcPLIY5 .milestone > div:not(:last-child){margin-bottom: 20px;}.cid-r5cTcPLIY5 .milestone > div:nth-last-child(2){margin-bottom: 0px;}}@media (max-width: 767px){.cid-r5cTcPLIY5 .second-element{padding-top: 50px;}.cid-r5cTcPLIY5 .milestone{text-align: center;}.cid-r5cTcPLIY5 .milestone .numeral{justify-content: center;}.cid-r5cTcPLIY5 .milestone > div:not(:last-child){margin-bottom: 20px;}}.cid-r5cTcPLIY5 .element-title{color: #f2eeef;}.cid-r5cTcPLIY5 .element-text{color: #f2eeef;}.cid-r5cTcPLIY5 .element-subtitle{color: #fac769;}.cid-r5cTcPLIY5 .milestone .numeral{text-align: left;color: #fac769;}.cid-r5cTcPLIY5 H4{color: #615779;}.cid-r5cTcPLIY5 .milestone .mbr-text{color: #fac769;}.cid-r89PwK56ml{padding-top: 5rem;padding-bottom: 0rem;background-color: #f2eeef;}.cid-r89PwK56ml .card-wrapper .card-box{width: 100%;}.cid-r89PwK56ml .card-wrapper,.cid-r89PwK56ml .card-wrapper .card-box,.cid-r89PwK56ml .card-wrapper .card-img{position: relative;}.cid-r89PwK56ml .card-wrapper{flex-direction: row;}.cid-r89PwK56ml .card-wrapper .card-img .amp-iconfont{font-size: 5.2rem;width: 5.2rem;}.cid-r89PwK56ml .card-wrapper .iconfont-wrapper{width: 5.2rem;height: 5.2rem;}.cid-r89PwK56ml .card-wrapper .card-img{width: auto;}@media (max-width: 767px){.cid-r89PwK56ml .card-wrapper .card-img .iconfont-wrapper{width: 30px;height: 30px;}.cid-r89PwK56ml .card-wrapper .card-img .iconfont-wrapper .amp-iconfont{font-size: 30px;width: 30px;}}.cid-r89PwK56ml .card-wrapper .card-box{padding-left: 1rem;}.cid-r89PwK56ml .card-wrapper{padding: 40px 30px;}@media (max-width: 991px){.cid-r89PwK56ml .card-wrapper{padding: 1rem;}}.cid-r89PwK56ml .card-wrapper > *,.cid-r89PwK56ml .card-wrapper,.cid-r89PwK56ml .card-box > *,.cid-r89PwK56ml .amp-iconfont{transition: all 0.3s linear;}.cid-r89PwK56ml .card-wrapper:hover{background: #fac769;}.cid-r89PwK56ml .card-wrapper:hover .card-img .amp-iconfont,.cid-r89PwK56ml .card-wrapper:hover .card-box > *{color: #614003;}.cid-r89PwK56ml .card-wrapper:hover .card-box .btn[class*="-outline"],.cid-r89PwK56ml .card-wrapper:hover .card-box .btn[class*="-outline"]:hover{color: #614003;border-color: #614003;}.cid-r89PwK56ml .mbr-row{margin-left: 0;margin-right: 0;}.cid-r89PwK56ml .mbr-row .card{padding: 0;}@media (min-width: 768px){.cid-r89PwK56ml .mbr-row .card:not(.last-child) .card-wrapper{border-right: 1px solid #fac769;}}@media (max-width: 767px){.cid-r89PwK56ml .mbr-row .card:not(.last-child) .card-wrapper{border-right: none;border-bottom: 1px solid #fac769;}}.cid-r89PwK56ml .title-wrap .mbr-section-title{color: #66458e;}.cid-r89PwK56ml .card-title{color: #66458e;}.cid-r89QvRarWL{padding-top: 75px;padding-bottom: 75px;background-color: #9c88bc;}.cid-r89QvRarWL .card-img{padding: 0;}.cid-r89QvRarWL .title-wrap{width: 100%;}.cid-r89QvRarWL .card-wrapper{background: #f7f7f7;}@media (min-width: 768px){.cid-r89QvRarWL .card-box{padding-left: 2rem;}}@media (max-width: 767px){.cid-r89QvRarWL .card-wrapper{flex-wrap: wrap;}.cid-r89QvRarWL .card-box{padding-top: 1rem;}}.cid-r89QvRarWL img{object-fit: contain;}.cid-r89QvRarWL .card-img{flex: 0 0 40%;}.cid-r89QvRarWL amp-img{margin-left: auto;width: 100%;height: auto;}.cid-r89QvRarWL .card-subtitle:before{content: "";width: 25px;height: 3px;margin-right: 10px;background-color: #fac769;display: inline-block;vertical-align: middle;}.cid-r89QvRarWL .card-box > *:not(.card-title){padding-top: 0.5rem;}.cid-r89QvRarWL .title-wrap .mbr-section-title{color: #fac769;text-align: right;}.cid-r89QvRarWL .card-subtitle{color: #66458e;}.cid-r89QvRarWL .title-wrap .mbr-section-subtitle{color: #fac769;}.cid-r89QvRarWL .title-wrap .mbr-section-subtitle B{color: #fac769;}.cid-r89QvRarWL .card-text{color: #615779;}.cid-s3kZoIGbR9{padding-top: 75px;padding-bottom: 75px;background-color: #f2eeef;}.cid-s3kZoIGbR9 .card-img{padding: 0;}.cid-s3kZoIGbR9 .icons-list .iconfont-wrapper{width: 2rem;height: 2rem;display: inline-block;}.cid-s3kZoIGbR9 .icons-list .amp-iconfont{font-size: 2rem;width: 2rem;color: #fac769;vertical-align: middle;}.cid-s3kZoIGbR9 .title-wrap{width: 100%;}.cid-s3kZoIGbR9 .card-wrapper{background: #9c88bc;}@media (min-width: 768px){.cid-s3kZoIGbR9 .card-box{padding-left: 2rem;}}@media (max-width: 767px){.cid-s3kZoIGbR9 .card-wrapper{flex-wrap: wrap;}.cid-s3kZoIGbR9 .card-box{padding-top: 1rem;}}.cid-s3kZoIGbR9 img{object-fit: contain;}.cid-s3kZoIGbR9 .card-img{flex: 0 0 40%;}.cid-s3kZoIGbR9 amp-img{margin-left: auto;width: 100%;height: auto;}.cid-s3kZoIGbR9 .card-title{color: #f2eeef;}.cid-s3kZoIGbR9 .card-subtitle{color: #fac769;}.cid-s3kZoIGbR9 .card-text{color: #f2eeef;}.cid-s5pBNhxfLh{padding-top: 5rem;padding-bottom: 5rem;background-color: #9c88bc;}.cid-s5pBNhxfLh .card-wrapper{z-index: 1;}@media (max-width: 991px){.cid-s5pBNhxfLh .card-wrapper{flex-wrap: wrap;}}.cid-s5pBNhxfLh .card-box{width: 100%;}.cid-s5pBNhxfLh .mbr-section-title{color: #f2eeef;}.cid-s5pBNhxfLh .mbr-section-subtitle{color: #fac769;}.cid-s5pBNhxfLh .card-title,.cid-s5pBNhxfLh .card-btn,.cid-s5pBNhxfLh .card-img{color: #fac769;}.cid-s3l8obHi6O{padding-top: 5rem;padding-bottom: 5rem;background-color: #ffffff;}.cid-s3l8obHi6O .card-wrapper{z-index: 1;}@media (max-width: 991px){.cid-s3l8obHi6O .card-wrapper{flex-wrap: wrap;}}.cid-s3l8obHi6O .card-box{width: 100%;}.cid-s3l8obHi6O .iconfont-wrapper{height: 3rem;width: 3rem;display: inline-block;}.cid-s3l8obHi6O .iconfont-wrapper .amp-iconfont{color: #fac769;transition: color 0.2s;vertical-align: bottom;}@media (min-width: 768px){.cid-s3l8obHi6O .iconfont-wrapper .amp-iconfont{font-size: 3rem;width: 3rem;}}@media (max-width: 767px){.cid-s3l8obHi6O .iconfont-wrapper .amp-iconfont{font-size: 2.5rem;width: 2.5rem;}}.cid-s3l8obHi6O mbr-section-title{color: #000000;}.cid-s3l8obHi6O mbr-section-subtitle{color: #000000;}.cid-s3l8obHi6O card-title{color: #000000;}.cid-s3l8obHi6O card-subtitle{color: #000000;}.cid-s3l8obHi6O card-text{color: #000000;}.cid-s3l8obHi6O .card-title{color: #66458e;}.cid-r89QzouNcO{padding-top: 2rem;padding-bottom: 2rem;background-color: #66458e;}.cid-r89QzouNcO .link-items .fLink,.cid-r89QzouNcO .copyright,.cid-r89QzouNcO .mbr-row{width: auto;}
+[class*="-iconfont"]{display: inline-flex;}</style>
+{% endraw %}
+
+  <script async  src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+
+
+</head>
+<body><amp-sidebar id="sidebar" class="cid-r5cH5HY9ZD" layout="nodisplay" side="right">
+		<div class="builder-sidebar" id="builder-sidebar">
+			<button on="tap:sidebar.close" class="close-sidebar">
+			<span></span>
+			<span></span>
+			</button>
+
+
+				<!-- NAVBAR ITEMS -->
+				<ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                    <li class="nav-item"><a class="nav-link mbr-bold link text-danger display-7" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link mbr-bold link text-danger display-7" href="#overview">Overview</a></li>
+                    <li class="nav-item"><a class="nav-link mbr-bold link text-danger display-7" href="#purpose">Purpose</a></li>
+                    <li class="nav-item"><a class="nav-link mbr-bold link text-danger display-7" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link mbr-bold link text-danger display-7" href="#project">Our Project</a></li>
+                    <li class="nav-item"><a class="nav-link mbr-bold link text-danger display-7" href="#resources">Resources</a></li>
+                </ul>
+				<!-- NAVBAR ITEMS END -->
+				<!-- SOCIAL ICON -->
+
+				<!-- SOCIAL ICON END -->
+				<!-- SHOW BUTTON -->
+				<div class="navbar-buttons mbr-section-btn"><a class="btn btn-md mbr-bold btn-primary display-7" href="https://www.ai-camp.org/" target="_blank">Join AI Camp</a></div>
+				<!-- SHOW BUTTON END -->
+			</div>
+	</amp-sidebar>
+  <section class="menu1 menu horizontal-menu cid-r5cH5HY9ZD" id="menu">
+
+	<!-- <div class="menu-wrapper"> -->
+	<nav class="navbar navbar-dropdown navbar-expand-lg navbar-fixed-top">
+		<div class="menu-container container">
+			<!-- SHOW LOGO -->
+			<div class="navbar-brand">
+
+				<span class="navbar-caption-wrap"><a class="navbar-caption mbr-bold text-danger display-5" href="/">Currency Detector</a></span>
+			</div>
+			<!-- SHOW LOGO END -->
+			<!-- COLLAPSED MENU -->
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+				<!-- NAVBAR ITEMS -->
+				<ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                    <li class="nav-item"><a class="nav-link mbr-bold link text-danger display-7" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link mbr-bold link text-danger display-7" href="#overview">Overview</a></li>
+                    <li class="nav-item"><a class="nav-link mbr-bold link text-danger display-7" href="#purpose">Purpose</a></li>
+                    <li class="nav-item"><a class="nav-link mbr-bold link text-danger display-7" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link mbr-bold link text-danger display-7" href="#project">Our Project</a></li>
+                    <li class="nav-item"><a class="nav-link mbr-bold link text-danger display-7" href="#resources">Resources</a></li>
+                </ul>
+				<!-- NAVBAR ITEMS END -->
+				<!-- SOCIAL ICON -->
+
+				<!-- SOCIAL ICON END -->
+				<!-- SHOW BUTTON -->
+				<div class="navbar-buttons mbr-section-btn"><a class="btn btn-md mbr-bold btn-primary display-7" href="https://www.ai-camp.org/" target="_blank">Join AI Camp</a></div>
+				<!-- SHOW BUTTON END -->
+			</div>
+			<!-- COLLAPSED MENU END -->
+
+			<button on="tap:sidebar.toggle" class="ampstart-btn hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+	</nav>
+	<!-- AMP plug -->
+
+	<!-- </div> -->
+</section>
+
+<section class="header1 cid-raG5GtYh47" id="features1-3l">
+
+    <div class="mbr-overlay"></div>
+    <div class="container">
+        <div class="mbr-row align-left">
+            <div class="title-block mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12">
+                <h1 class="mbr-section-title mbr-fonts-style mbr-white mbr-bold display-1">Currency Detection&nbsp;<br>at your fingertips.</h1>
+                <h2 class="mbr-section-subtitle mbr-fonts-style mbr-white mbr-pt-3 display-5">AI technology that detects the currency of the note submitted.<br>Currently detects USD, Euro, GBP, and Chinese Renminbi.</h2>
+                <div class="mbr-section-btn mbr-pt-4">
+                    <a class="btn-primary btn display-7" id='seefood_button'>
+                        <form id='seefood_form' method=post enctype=multipart/form-data>
+                            <input id="seefood_input_field" name="file" accept="image/png, image/jpeg" type="file" onchange="this.form.submit();" hidden/>
+                        </form>Try our Product
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="consulting-header3 cid-r5cTcPLIY5" id="overview">
+
+
+
+    <div class="container">
+
+        <div class="mbr-row">
+            <div class="container-elements mbr-flex flex-wrap mbr-row-reverse">
+
+                <div class="image-wrap mbr-flex mbr-col-sm-12 mbr-col-md-7">
+                    <amp-img src="/static/images/project-overview-image.jpg" layout="responsive" width="767.400468384075" height="512" alt="" class="placeholder-loader mbr-m-auto">
+                        <div placeholder="" class="placeholder">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                                    <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
+                                    <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
+                                </svg></div>
+
+                    </amp-img>
+                </div>
+                <div class="second-element mbr-flex mbr-col-sm-12 mbr-col-md-5">
+                    <div class="second-element-box align-center mbr-m-auto">
+                        <h2 class="element-title mbr-fonts-style mbr-bold display-1">Our Project</h2>
+                        <h3 class="element-subtitle mbr-fonts-style mbr-bold display-1">Overview</h3>
+
+                        <p class="mbr-text element-text mbr-fonts-style mbr-regular display-5 mbr-pt-3">Our currency detector was created in order to help banks facilitate the exchange of different currencies in an automatic fashion.&nbsp;&nbsp;<br></p>
+                        <div class="milestone mbr-row mbr-px-2 mbr-pt-4">
+
+
+                        <div class="mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-6">
+                                <div class="numeral mbr-flex mbr-jc-c">
+                                    <h4 class="mbr-fonts-style mbr-bold display-2">$$$</h4>
+                                    <h4 class="mbr-fonts-style mbr-bold display-5"></h4>
+                                </div>
+                                <p class="mbr-text mbr-fonts-style mbr-semibold display-5">Dollar</p><h4></h4><p></p>
+                            </div><div class="mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-6">
+                                <div class="numeral mbr-flex mbr-jc-c">
+                                    <h4 class="mbr-fonts-style mbr-bold display-4"></h4>
+                                    <h4 class="mbr-fonts-style mbr-bold display-2">€€€</h4>
+                                </div>
+                                <p class="mbr-text mbr-fonts-style mbr-semibold display-5">Euro</p>
+                            </div><div class="mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-6">
+                                <div class="numeral mbr-flex mbr-jc-c">
+                                    <h4 class="mbr-fonts-style mbr-bold display-2">£££</h4>
+                                    <h4 class="mbr-fonts-style mbr-bold display-5"></h4>
+                                </div>
+                                <p class="mbr-text mbr-fonts-style mbr-semibold display-5">British Pound</p>
+                            </div><div class="mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-6">
+                                <div class="numeral mbr-flex mbr-jc-c">
+                                    <h4 class="mbr-fonts-style mbr-bold display-2">¥¥¥</h4>
+                                    <h4 class="mbr-fonts-style mbr-bold display-5"></h4>
+                                </div>
+                                <p class="mbr-text mbr-fonts-style mbr-semibold display-5">Chinese Renminbi</p>
+                            </div></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features10 cid-r89PwK56ml" id="purpose">
+
+
+
+
+    <div class="container">
+        <div class="title-wrap mbr-pb-4 align-center">
+            <h2 class="mbr-section-title mbr-semibold mbr-fonts-style display-2">The Purpose Of Our Model</h2>
+
+        </div>
+        <div class="mbr-row mbr-jc-c">
+            <div class="card mbr-col-sm-12 mbr-col-md-6 mbr-col-xl-6">
+                <div class="card-wrapper mbr-p-4 mbr-flex">
+
+                    <div class="card-img">
+                        <div class="iconfont-wrapper">
+                            <span class="amp-iconfont mbri-cash"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32" fill="currentColor">
+
+<path d="M7.333 5.333c-0.451-0.006-0.667 0.33-0.667 0.667s0.216 0.673 0.667 0.667h22.667c0.381 0 0.667 0.286 0.667 0.667v13.333c-0.006 0.451 0.33 0.667 0.667 0.667s0.673-0.216 0.667-0.667v-13.333c0-1.096-0.904-2-2-2zM4.667 8c-0.451-0.006-0.667 0.33-0.667 0.667s0.216 0.673 0.667 0.667h22.667c0.381 0 0.667 0.286 0.667 0.667v13.333c-0.006 0.451 0.33 0.667 0.667 0.667s0.673-0.216 0.667-0.667v-13.333c0-1.096-0.904-2-2-2zM2 10.667c-1.096 0-2 0.904-2 2v13.333c0 1.096 0.904 2 2 2h22.667c1.096 0 2-0.904 2-2v-13.333c0-1.096-0.904-2-2-2zM2 12h22.667c0.381 0 0.667 0.286 0.667 0.667v13.333c0 0.381-0.286 0.667-0.667 0.667h-22.667c-0.381 0-0.667-0.286-0.667-0.667v-13.333c0-0.381 0.286-0.667 0.667-0.667zM3.333 13.333c-0.368 0-0.667 0.299-0.667 0.667v2.667c-0.006 0.451 0.33 0.667 0.667 0.667s0.673-0.216 0.667-0.667v-2h2c0.451 0.006 0.667-0.33 0.667-0.667s-0.216-0.673-0.667-0.667zM12.667 13.333c-3.306 0-6 2.694-6 6s2.694 6 6 6c3.306 0 6-2.694 6-6s-2.694-6-6-6zM20.667 14.667h2v2c-0.006 0.451 0.33 0.667 0.667 0.667s0.673-0.216 0.667-0.667v-2.667c-0-0.368-0.299-0.667-0.667-0.667h-2.667c-0.464 0-0.667 0.279-0.667 0.667s0.182 0.667 0.667 0.667zM12.667 14.667c2.585 0 4.667 2.081 4.667 4.667s-2.081 4.667-4.667 4.667c-2.585 0-4.667-2.081-4.667-4.667s2.081-4.667 4.667-4.667zM12.667 16c-1.094 0-2 0.906-2 2s0.906 2 2 2c0.373 0 0.667 0.283 0.667 0.667s-0.294 0.667-0.667 0.667h-1.333c-0.451-0.006-0.667 0.33-0.667 0.667s0.216 0.673 0.667 0.667h1.333c1.094 0 2-0.906 2-2s-0.906-2-2-2c-0.373 0-0.667-0.283-0.667-0.667s0.294-0.667 0.667-0.667h1.333c0.451 0.006 0.667-0.33 0.667-0.667s-0.216-0.673-0.667-0.667zM3.333 21.333c-0.376-0.006-0.673 0.29-0.667 0.667v2.667c0 0.368 0.298 0.667 0.667 0.667h2.667c0.451 0.006 0.667-0.33 0.667-0.667s-0.216-0.673-0.667-0.667h-2v-2c0.006-0.368-0.298-0.661-0.667-0.667zM23.333 21.333c-0.368 0.006-0.672 0.298-0.667 0.667v2h-2c-0.451-0.006-0.667 0.33-0.667 0.667s0.216 0.673 0.667 0.667h2.667c0.368-0 0.667-0.299 0.667-0.667v-2.667c0.006-0.376-0.29-0.673-0.667-0.667z"></path>
+</svg></span>
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <h3 class="card-title mbr-fonts-style mbr-bold display-5">Automating the Currency Exchange Process</h3>
+
+                        <p class="mbr-text mbr-fonts-style mbr-regular display-7 mbr-pt-3">Through our AI model, we are able to eliminate currency exchange centers in favor of machines that are more efficient than human operated processes.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mbr-col-sm-12 mbr-col-md-6 mbr-col-xl-6 last-child">
+                <div class="card-wrapper mbr-flex">
+
+                    <div class="card-img">
+                        <div class="iconfont-wrapper">
+                            <span class="amp-iconfont mbri-globe"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32" fill="currentColor">
+
+<path d="M20.667 2.667c-0.599 0-0.875 0.734-0.471 1.138 0 0 0.288 0.289 0.583 0.732s0.555 1.019 0.555 1.464c0 0.111-0.113 0.51-0.344 0.961s-0.555 0.974-0.885 1.495c-0.331 0.52-0.669 1.037-0.935 1.505s-0.503 0.822-0.503 1.372c0 0.556 0.333 1.145 0.906 1.49s1.353 0.51 2.427 0.51c0.926 0 1.48 0.167 1.74 0.323s0.26 0.233 0.26 0.344c0 0.208 0.099 0.429 0.219 0.56s0.242 0.197 0.352 0.245c0.218 0.096 0.415 0.129 0.63 0.159 0.431 0.060 0.93 0.072 1.411 0.117 0.606 0.056 1.366 0.21 1.365 0.362-0.002 0.334-0.309 0.755-0.93 1.169-0.636 0.424-1.528 0.721-2.38 0.721-1.074 0-1.854 0.166-2.427 0.51s-0.906 0.934-0.906 1.49c0 0.549-0.256 0.667-0.667 0.667-0.556 0-1.033 0.257-1.388 0.612s-0.612 0.832-0.612 1.388c0 0.556 0.204 1.411 0.841 2.503s1.72 2.346 3.482 3.404c0.732 0.439 1.419-0.707 0.688-1.146-1.571-0.943-2.488-2.021-3.018-2.93s-0.659-1.72-0.659-1.831c-0.035-0.398 0.286-0.667 0.667-0.667 0.556 0 1.033-0.257 1.388-0.612s0.612-0.832 0.612-1.388c0-0.111 0.001-0.188 0.26-0.344s0.814-0.323 1.74-0.323c1.148 0 2.256-0.369 3.12-0.945s1.547-1.388 1.547-2.388c0-0.333-0.153-0.666-0.365-0.88s-0.455-0.336-0.701-0.424c-0.491-0.177-1.029-0.233-1.547-0.276s-1.156-0.047-1.309-0.266c-0.242-0.348-0.412-0.632-0.986-0.977s-1.353-0.51-2.427-0.51c-0.926 0-1.48-0.167-1.74-0.323-0.353-0.204-0.156-0.666 0.070-1.057 0.234-0.412 0.563-0.92 0.898-1.448s0.679-1.078 0.948-1.604c0.269-0.527 0.49-1.012 0.49-1.568 0-0.889-0.407-1.646-0.779-2.203s-0.75-0.935-0.75-0.935c-0.126-0.13-0.291-0.195-0.471-0.195zM3.333 12c-0.451-0.006-0.667 0.33-0.667 0.667s0.216 0.673 0.667 0.667h1.133c0.504 0 0.68 1.333 1.534 1.333h1.333c0.432 0.007 0.667 0.302 0.667 0.667v2c0 0.573 0.084 1.17 0.378 1.698s0.9 0.969 1.622 0.969h1.333c0.422 0.007 0.667 0.312 0.667 0.667v6.667c0 0.889 0.544 1.517 1.036 1.763s0.964 0.237 0.964 0.237c0.451 0.006 0.667-0.33 0.667-0.667s-0.216-0.673-0.667-0.667c0 0-0.195-0.009-0.37-0.096s-0.297-0.126-0.297-0.57v-6.667c0-0.563-0.273-1.023-0.625-1.375s-0.812-0.625-1.375-0.625h-1.333c-0.547 0-0.667-0.667-0.667-1.333v-2c0-0.563-0.273-1.023-0.625-1.375s-0.812-0.625-1.375-0.625h-0.667c-0.667 0-0.758-0.426-1.104-0.888-0.163-0.218-0.503-0.445-0.896-0.445zM16 0c-8.829 0-16 7.171-16 16s7.171 16 16 16c8.829 0 16-7.171 16-16s-7.171-16-16-16zM16 1.333c8.108 0 14.667 6.559 14.667 14.667s-6.559 14.667-14.667 14.667c-8.108 0-14.667-6.559-14.667-14.667s6.559-14.667 14.667-14.667z"></path>
+</svg></span>
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <h3 class="card-title mbr-fonts-style mbr-bold display-5">Overcoming Language Barriers</h3>
+
+                        <p class="mbr-text mbr-fonts-style mbr-regular display-7 mbr-pt-3">
+                           Foreigners do not have to worry about communication when they are exchanging their&nbsp;bills in a new country.&nbsp;<br></p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</section>
+
+<section class="team1 cid-r89QvRarWL" id="team">
+
+
+    <!--  -->
+    <div class="container">
+        <div class="title mbr-pb-4 align-center">
+            <h3 class="mbr-section-title mbr-semibold mbr-fonts-style display-1">Our Team</h3>
+
+        </div>
+        <div class="mbr-row mbr-jc-c">
+            <div class="card mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-6 md-pb lg-pb">
+                <div class="card-wrapper mbr-flex">
+                    <div class="card-img mbr-col-md-6">
+                        <amp-img class="placeholder-loader" src="/static/images/axel.jpg" layout="responsive" width="214.83185840707966" height="204" alt="">
+                            <div placeholder="" class="placeholder">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                                    <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
+                                    <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
+                                </svg></div>
+
+                        </amp-img>
+                    </div>
+                    <div class="card-box mbr-pt-3 mbr-px-4 mbr-pb-3">
+                        <h3 class="card-title mbr-semibold mbr-fonts-style display-5">Axel A. Mora</h3>
+                        <h4 class="card-subtitle mbr-semibold mbr-fonts-style mbr-pt-1 display-7">Student at Amador Valley High School&nbsp;</h4>
+                        <p class="card-text mbr-fonts-style mbr-pt-1 mbr-regular display-7">Axel is passionate about creating technology that unleashes user potential. As Project Manager he contributed to the model integration and back-end development.</p>
+                        <div class="icons-list mbr-pt-2">
+
+
+
+
+                        <a href="https://www.linkedin.com/in/axel-a-mora-a15b121a9/" target="_blank" class="iconfont-wrapper">
+                                <span class="amp-iconfont animation-normal fa-linkedin-square fa"><svg width="100%" height="100%" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M365 1414h231v-694h-231v694zm246-908q-1-52-36-86t-93-34-94.5 34-36.5 86q0 51 35.5 85.5t92.5 34.5h1q59 0 95-34.5t36-85.5zm585 908h231v-398q0-154-73-233t-193-79q-136 0-209 117h2v-101h-231q3 66 0 694h231v-388q0-38 7-56 15-35 45-59.5t74-24.5q116 0 116 157v371zm468-998v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"></path></svg></span>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="card mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-6 md-pb lg-pb">
+                <div class="card-wrapper mbr-flex">
+                    <div class="card-img mbr-col-md-6">
+                        <amp-img class="placeholder-loader" src="/static/images/miha.jpg" layout="responsive" width="215.19553072625698" height="216" alt="">
+                            <div placeholder="" class="placeholder">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                                    <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
+                                    <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
+                                </svg></div>
+
+                        </amp-img>
+                    </div>
+                    <div class="card-box mbr-pt-3 mbr-px-4 mbr-pb-3">
+                        <h3 class="card-title mbr-semibold mbr-fonts-style display-5">Miha Bhaskaran</h3>
+                        <h4 class="card-subtitle mbr-semibold mbr-fonts-style mbr-pt-1 display-7">Student at the American High School</h4>
+                        <p class="card-text mbr-fonts-style mbr-pt-1 mbr-regular display-7">Through the process of making this project, Miha learned the steps to make an efficient object detection model using YOLOv3. She contributed to this project by labeling data, tweaking the model training code, and building the front-end.&nbsp;</p>
+                        <div class="icons-list mbr-pt-2">
+
+
+
+
+                        <a href="http://www.linkedin.com/in/miha-bhaskaran-672b0b19a" target="_blank" class="iconfont-wrapper">
+                                <span class="amp-iconfont animation-normal fa-linkedin-square fa"><svg width="100%" height="100%" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M365 1414h231v-694h-231v694zm246-908q-1-52-36-86t-93-34-94.5 34-36.5 86q0 51 35.5 85.5t92.5 34.5h1q59 0 95-34.5t36-85.5zm585 908h231v-398q0-154-73-233t-193-79q-136 0-209 117h2v-101h-231q3 66 0 694h231v-388q0-38 7-56 15-35 45-59.5t74-24.5q116 0 116 157v371zm468-998v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"></path></svg></span>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="card mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-6 md-pb lg-pb">
+                <div class="card-wrapper mbr-flex">
+                    <div class="card-img mbr-col-md-6">
+                        <amp-img class="placeholder-loader" src="/static/images/pranav.jpg" layout="responsive" width="215.22162162162164" height="252" alt="">
+                            <div placeholder="" class="placeholder">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                                    <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
+                                    <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
+                                </svg></div>
+
+                        </amp-img>
+                    </div>
+                    <div class="card-box mbr-pt-3 mbr-px-4 mbr-pb-3">
+                        <h3 class="card-title mbr-semibold mbr-fonts-style display-5">Pranav Gupta</h3>
+                        <h4 class="card-subtitle mbr-semibold mbr-fonts-style mbr-pt-1 display-7">Student at Harker School</h4>
+                        <p class="card-text mbr-fonts-style mbr-pt-1 mbr-regular display-7">Pranav enjoyed learning about neural networks and how the hidden layer worked in relation to the whole neural net model. He&nbsp; contributed by working on the YOLO conversion for the images.</p>
+                        <div class="icons-list mbr-pt-2">
+
+
+
+
+                        <a href="mailto:22pranavg@students.harker.org" class="iconfont-wrapper">
+                                <span class="amp-iconfont animation-normal fa-envelope-o fa"><svg width="100%" height="100%" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M1664 1504v-768q-32 36-69 66-268 206-426 338-51 43-83 67t-86.5 48.5-102.5 24.5h-2q-48 0-102.5-24.5t-86.5-48.5-83-67q-158-132-426-338-37-30-69-66v768q0 13 9.5 22.5t22.5 9.5h1472q13 0 22.5-9.5t9.5-22.5zm0-1051v-24.5l-.5-13-3-12.5-5.5-9-9-7.5-14-2.5h-1472q-13 0-22.5 9.5t-9.5 22.5q0 168 147 284 193 152 401 317 6 5 35 29.5t46 37.5 44.5 31.5 50.5 27.5 43 9h2q20 0 43-9t50.5-27.5 44.5-31.5 46-37.5 35-29.5q208-165 401-317 54-43 100.5-115.5t46.5-131.5zm128-37v1088q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-1088q0-66 47-113t113-47h1472q66 0 113 47t47 113z"></path></svg></span>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- -->
+            <div class="card mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-6 md-pb lg-pb">
+                <div class="card-wrapper mbr-flex">
+                    <div class="card-img mbr-col-md-6">
+                        <amp-img class="placeholder-loader" src="/static/images/sameer.jpg" layout="responsive" width="215.4103139013453" height="191" alt="">
+                            <div placeholder="" class="placeholder">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                                    <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
+                                    <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
+                                </svg></div>
+
+                        </amp-img>
+                    </div>
+                    <div class="card-box mbr-pt-3 mbr-px-4 mbr-pb-3">
+                        <h3 class="card-title mbr-semibold mbr-fonts-style display-5"><p>Sameer Nayyar</p></h3>
+                        <h4 class="card-subtitle mbr-semibold mbr-fonts-style mbr-pt-1 display-7">Student at Loyola High School</h4>
+                        <!-- <h4 class="card-subtitle mbr-bold mbr-fonts-style mbr-pt-3 display-7"> -->
+                        <p class="card-text mbr-fonts-style mbr-pt-1 mbr-regular display-7">At AI Camp, Sameer learned about backpropagation and gradient descent. Sameer also coded the script to retrieve data from Bing, the script to download data from Labelbox, the script to evaluate the model, and the back-end of this website.</p>
+                        <div class="icons-list mbr-pt-2">
+
+
+
+
+                        <a href="https://www.linkedin.com/in/sameer-nayyar-02b2211b3/" target="_blank" class="iconfont-wrapper">
+                                <span class="amp-iconfont animation-normal fa-linkedin-square fa"><svg width="100%" height="100%" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M365 1414h231v-694h-231v694zm246-908q-1-52-36-86t-93-34-94.5 34-36.5 86q0 51 35.5 85.5t92.5 34.5h1q59 0 95-34.5t36-85.5zm585 908h231v-398q0-154-73-233t-193-79q-136 0-209 117h2v-101h-231q3 66 0 694h231v-388q0-38 7-56 15-35 45-59.5t74-24.5q116 0 116 157v371zm468-998v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"></path></svg></span>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- -->
+            <!--  -->
+            <div class="card mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-6 md-pb">
+                <div class="card-wrapper mbr-flex">
+                    <div class="card-img mbr-col-md-6">
+                        <amp-img class="placeholder-loader" src="/static/images/brandon.jpg" layout="responsive" width="214.89454545454544" height="166" alt="">
+                            <div placeholder="" class="placeholder">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                                    <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
+                                    <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
+                                </svg></div>
+
+                        </amp-img>
+                    </div>
+                    <div class="card-box mbr-pt-3 mbr-px-4 mbr-pb-3">
+                        <h3 class="card-title mbr-semibold mbr-fonts-style display-5">Brandon Ang</h3>
+                        <h4 class="card-subtitle mbr-semibold mbr-fonts-style mbr-pt-1 display-7">Student at Wilcox High School</h4>
+                        <p class="card-text mbr-fonts-style mbr-pt-1 mbr-regular display-7">At AI Camp, Brandon learned all about the different types of neural networks. He contributed to this project by sourcing, cleaning, and labeling the training data using Labelbox.&nbsp;</p>
+                        <div class="icons-list mbr-pt-2">
+
+                            <a href="mailto:thelucariokid741@gmail.com" class="iconfont-wrapper">
+                                <span class="amp-iconfont animation-normal mobi-mbri-letter mobi-mbri"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="100%" height="100%"><path d="M0 4v16h24V4H0zm19.8 2L12 10.7 4.2 6h15.6zM2 18V7l10 6 10-6v11H2z"></path></svg></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="card mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-6 last-child">
+                <div class="card-wrapper mbr-flex">
+                    <div class="card-img mbr-col-md-6">
+                        <amp-img class="placeholder-loader" src="/static/images/catrin.jpg" layout="responsive" width="215.62758620689655" height="162" alt="">
+                            <div placeholder="" class="placeholder">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                                    <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
+                                    <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
+                                </svg></div>
+
+                        </amp-img>
+                    </div>
+                    <div class="card-box mbr-pt-3 mbr-px-4 mbr-pb-3">
+                        <h3 class="card-title mbr-semibold mbr-fonts-style display-5"><p>Catrin Tran</p></h3>
+                        <h4 class="card-subtitle mbr-semibold mbr-fonts-style mbr-pt-1 display-7">Student at Valley Christian High School&nbsp;</h4>
+                        <!-- <h4 class="card-subtitle mbr-bold mbr-fonts-style mbr-pt-3 display-7"> -->
+                        <p class="card-text mbr-fonts-style mbr-pt-1 mbr-regular display-7">Catrin likes learning more about AI and coding. She helped to collect and label data for the project and worked on the front end of the website.</p>
+                        <div class="icons-list mbr-pt-2">
+
+
+
+
+                            <a href="mailto:cattrin@yahoo.com" class="iconfont-wrapper">
+                                <span class="amp-iconfont animation-normal mobi-mbri-letter mobi-mbri"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="100%" height="100%"><path d="M0 4v16h24V4H0zm19.8 2L12 10.7 4.2 6h15.6zM2 18V7l10 6 10-6v11H2z"></path></svg></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="team1 cid-s3kZoIGbR9" id="team1-3d">
+
+
+    <!--  -->
+    <div class="container">
+
+        <div class="mbr-row mbr-jc-c mbr-pt-4">
+            <div class="card mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-6 md-pb">
+                <div class="card-wrapper mbr-flex">
+                    <div class="card-img mbr-col-md-6">
+                        <amp-img class="placeholder-loader" src="/static/images/michael.jpg" layout="responsive" width="215" height="215" alt="">
+                            <div placeholder="" class="placeholder">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                                    <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
+                                    <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
+                                </svg></div>
+
+                        </amp-img>
+                    </div>
+                    <div class="card-box mbr-pt-3 mbr-px-4 mbr-pb-3">
+                        <h3 class="card-title mbr-bold mbr-fonts-style display-5">Dr. Michael Ke Zhang</h3>
+                        <h4 class="card-subtitle mbr-bold mbr-fonts-style mbr-pt-3 display-7">Chief Instructor</h4>
+                        <p class="card-text mbr-fonts-style mbr-pt-1 display-7">Michael is one of our instructors. Previously he ran data teams at Blend Labs and Grab. He's also a founder and EIR at Fusion Fund. He enjoys teaching and inspiring the next generation of students. He graduated from Caltech with a BS and Stanford with a Ph.D. in Applied Physics.</p>
+                        <div class="icons-list mbr-pt-4">
+
+
+
+                        <a href="https://www.linkedin.com/in/michaelkezhang" target="_blank" class="iconfont-wrapper">
+                                <span class="amp-iconfont animation-normal fa-linkedin-square fa"><svg width="100%" height="100%" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M365 1414h231v-694h-231v694zm246-908q-1-52-36-86t-93-34-94.5 34-36.5 86q0 51 35.5 85.5t92.5 34.5h1q59 0 95-34.5t36-85.5zm585 908h231v-398q0-154-73-233t-193-79q-136 0-209 117h2v-101h-231q3 66 0 694h231v-388q0-38 7-56 15-35 45-59.5t74-24.5q116 0 116 157v371zm468-998v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"></path></svg></span>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="card mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-6 last-child">
+                <div class="card-wrapper mbr-flex">
+                    <div class="card-img mbr-col-md-6">
+                        <amp-img class="placeholder-loader" src="/static/images/richard.jpg" layout="responsive" width="214.8994368463395" height="224" alt="">
+                            <div placeholder="" class="placeholder">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                                    <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
+                                    <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
+                                </svg></div>
+
+                        </amp-img>
+                    </div>
+                    <div class="card-box mbr-pt-3 mbr-px-4 mbr-pb-3">
+                        <h3 class="card-title mbr-bold mbr-fonts-style display-5">Richard Hsu</h3>
+                        <h4 class="card-subtitle mbr-bold mbr-fonts-style mbr-pt-3 display-7">Instructor</h4>
+                        <p class="card-text mbr-fonts-style mbr-pt-1 display-7">Richard is one of our instructors. Previously, he led software engineering teams at the Federal Reserve Bank of San Francisco.  He is a Carnegie Mellon University graduate with a BS in Electrical Computer Engineering and a MS in Software Management.</p>
+                        <div class="icons-list mbr-pt-4">
+
+
+
+                        <a href="https://www.linkedin.com/in/daokid/" target="_blank" class="iconfont-wrapper">
+                                <span class="amp-iconfont animation-normal fa-linkedin-square fa"><svg width="100%" height="100%" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M365 1414h231v-694h-231v694zm246-908q-1-52-36-86t-93-34-94.5 34-36.5 86q0 51 35.5 85.5t92.5 34.5h1q59 0 95-34.5t36-85.5zm585 908h231v-398q0-154-73-233t-193-79q-136 0-209 117h2v-101h-231q3 66 0 694h231v-388q0-38 7-56 15-35 45-59.5t74-24.5q116 0 116 157v371zm468-998v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"></path></svg></span>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features3 cid-s5pBNhxfLh" id="project">
+
+
+
+    <div class="container">
+        <div class="title mbr-pb-4 align-center">
+            <h3 class="mbr-section-title mbr-bold mbr-fonts-style display-2">Our Project</h3>
+            <h4 class="mbr-section-subtitle mbr-pt-2 mbr-fonts-style display-5">Sample pictures of what our model can do</h4>
+        </div>
+        <div class="mbr-row">
+            <div class="card mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-3 md-pb">
+                <div class="card-wrapper mbr-column">
+                    <div class="card-img mbr-flex">
+                        <amp-img src="/static/images/dollar.jpg" layout="responsive" width="253.62962962962962" height="107" alt="" class="placeholder-loader">
+                            <div placeholder="" class="placeholder">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                                    <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
+                                    <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
+                                </svg></div>
+
+                        </amp-img>
+                    </div>
+                    <div class="card-box mbr-m-auto mbr-pt-3 align-center">
+                        <h3 class="card-title mbr-bold mbr-fonts-style display-5">US Dollar</h3>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-3 md-pb">
+                <div class="card-wrapper mbr-column">
+                    <div class="card-img mbr-flex">
+                        <amp-img src="/static/images/euro.jpg" layout="responsive" width="253.6881188118812" height="148" alt="" class="placeholder-loader">
+                            <div placeholder="" class="placeholder">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                                    <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
+                                    <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
+                                </svg></div>
+
+                        </amp-img>
+                    </div>
+                    <div class="card-box mbr-m-auto mbr-pt-3 align-center">
+                        <h3 class="card-title mbr-bold mbr-fonts-style display-5">Euro</h3>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="card mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-3">
+                <div class="card-wrapper mbr-column">
+                    <div class="card-img mbr-flex">
+                        <amp-img src="/static/images/pound.jpg" layout="responsive" width="253.33333333333331" height="133" alt="" class="placeholder-loader">
+                            <div placeholder="" class="placeholder">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                                    <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
+                                    <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
+                                </svg></div>
+
+                        </amp-img>
+                    </div>
+                    <div class="card-box mbr-m-auto mbr-pt-3 align-center">
+                        <h3 class="card-title mbr-bold mbr-fonts-style display-5">British Pound</h3>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="card mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-3 last-child">
+                <div class="card-wrapper mbr-column">
+                    <div class="card-img mbr-flex">
+                        <amp-img src="/static/images/renminbi.jpg" layout="responsive" width="253.995" height="123" alt="" class="placeholder-loader">
+                            <div placeholder="" class="placeholder">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                                    <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
+                                    <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
+                                </svg></div>
+
+                        </amp-img>
+                    </div>
+                    <div class="card-box mbr-m-auto mbr-pt-3 align-center">
+                        <h3 class="card-title mbr-bold mbr-fonts-style display-5">Chinese Renminbi</h3>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features1 cid-s3l8obHi6O" id="resources">
+
+
+
+    <div class="container">
+        <div class="title-wrap mbr-pb-4 align-center">
+            <h3 class="mbr-section-title mbr-bold mbr-fonts-style display-2">Resources</h3>
+
+        </div>
+        <div class="mbr-row mbr-jc-c">
+            <div class="card mbr-col-sm-12 mbr-col-md-8 mbr-col-lg-4 align-center md-pb">
+                <div class="card-wrapper mbr-flex mbr-column">
+                    <div class="card-img align-center mbr-pb-3">
+                        <div class="iconfont-wrapper">
+                            <span class="amp-iconfont mbri-users"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32" fill="currentColor">
+
+<path d="M10 9.333c-1.705 0-2.95 0.993-3.667 2.201s-1 2.63-1 3.799c0 1.056-0.013 1.669-0.141 2.104s-0.363 0.791-0.997 1.424c-0.42 0.42-0.122 1.138 0.471 1.138 1.105 0 2.256-0.213 3.214-0.667-0.076 0.388-0.193 0.825-0.341 1.102-0.316 0.588-0.692 0.898-1.539 0.898-0.86 0-0.891 1.333 0 1.333 1.267 0 2.224-0.69 2.714-1.602s0.62-2.004 0.62-3.065c-0-0.594-0.718-0.891-1.138-0.471-0.614 0.614-1.359 0.857-2.195 0.99 0.173-0.173 0.401-0.456 0.474-0.706 0.206-0.704 0.193-1.423 0.193-2.479 0-0.942 0.259-2.186 0.813-3.117s1.307-1.549 2.521-1.549c1.214 0 1.968 0.618 2.521 1.549s0.813 2.175 0.813 3.117c0 1.079 0.050 1.869 0.281 2.581 0.081 0.249 0.202 0.478 0.385 0.661-0.789-0.083-1.431-0.283-2.195-1.047-0.42-0.42-1.138-0.122-1.138 0.471 0 1.061 0.131 2.154 0.62 3.065s1.446 1.602 2.714 1.602c0.865 0.012 0.896-1.333 0-1.333-0.847 0-1.223-0.31-1.539-0.898-0.147-0.274-0.291-0.717-0.367-1.102 0.988 0.479 2.15 0.667 3.24 0.667 0.594-0 0.891-0.718 0.471-1.138-0.518-0.517-0.765-0.878-0.922-1.359s-0.216-1.136-0.216-2.169c0-1.17-0.283-2.592-1-3.799s-1.962-2.201-3.667-2.201zM16 0c-8.829 0-16 7.171-16 16s7.171 16 16 16c8.829 0 16-7.171 16-16s-7.171-16-16-16zM16 1.333c8.108 0 14.667 6.559 14.667 14.667s-6.559 14.667-14.667 14.667c-8.108 0-14.667-6.559-14.667-14.667s6.559-14.667 14.667-14.667zM27.756 21.465c-0.709-0.709-1.090-1.176-1.090-1.176v-2.086l1.221-1.833c0.073-0.11 0.112-0.238 0.112-0.37v-2.667c0-3.033-2.506-5.333-5.333-5.333s-5.333 2.3-5.333 5.333v2.667c0 0.132 0.039 0.26 0.112 0.37l1.221 1.833v2.086l-6.344 3.805c-0.201 0.121-0.323 0.338-0.323 0.573v1.333c0 0.875 1.333 0.891 1.333 0v-0.956l6.344-3.805c0.201-0.121 0.323-0.338 0.323-0.573v-2.667c0-0.132-0.039-0.26-0.112-0.37l-1.221-1.833v-2.464c0-2.3 1.894-4 4-4s4 1.7 4 4v2.464l-1.221 1.833c-0.073 0.11-0.112 0.238-0.112 0.37v2.667c-0.001 0.234 0.139 0.389 0.323 0.573 0 0 0.384 0.47 1.090 1.176s1.72-0.241 1.010-0.951z"></path>
+</svg></span>
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <h3 class="card-title mbr-bold mbr-fonts-style display-5">AI Camp</h3>
+
+                        <p class="card-text mbr-fonts-style mbr-pt-2 display-7">AI Camp is the basis of this product. Without this camp this product wouldn't exist! With the help of us campers and our instructors, in just 3 weeks we came up with, prepared, and created an AI product in which we are presenting to you!&nbsp;<br><br><br><br></p>
+                        <div class="card-btn mbr-section-btn mbr-pt-2"><a class="btn btn-lg btn-primary display-7" href="https://www.ai-camp.org/" target="_blank">AI Camp&nbsp;</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mbr-col-sm-12 mbr-col-md-8 mbr-col-lg-4 align-center md-pb">
+                <div class="card-wrapper mbr-flex mbr-column">
+                    <div class="card-img align-center mbr-pb-3">
+                        <div class="iconfont-wrapper">
+                            <span class="amp-iconfont mbri-photos"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32" fill="currentColor">
+
+<path d="M6.667 4c-1.465 0-2.667 1.202-2.667 2.667s1.202 2.667 2.667 2.667c1.465 0 2.667-1.202 2.667-2.667s-1.202-2.667-2.667-2.667zM6.667 5.333c0.744 0 1.333 0.589 1.333 1.333s-0.589 1.333-1.333 1.333c-0.744 0-1.333-0.589-1.333-1.333s0.589-1.333 1.333-1.333zM18 9.333c-0.148 0.002-0.318 0.065-0.433 0.157l-6.233 4.961-2.203-2.247c-0.234-0.235-0.606-0.262-0.871-0.062l-5.327 3.995c-0.704 0.529 0.143 1.561 0.801 1.067l4.933-3.67 2.186 2.276c0.24 0.24 0.622 0.261 0.887 0.049l6.26-4.955 3.507 3.574c0.628 0.654 1.595-0.314 0.942-0.942l-3.995-3.995c-0.127-0.127-0.273-0.209-0.454-0.206zM3.333 20h18.667c0.369 0 0.667 0.297 0.667 0.667s-0.297 0.667-0.667 0.667h-18.667c-0.369 0-0.667-0.297-0.667-0.667s0.297-0.667 0.667-0.667zM2 0c-1.096 0-2 0.904-2 2v21.333c0 1.096 0.904 2 2 2h21.333c1.096 0 2-0.904 2-2v-21.333c0-1.096-0.904-2-2-2h-21.333zM2 1.333h21.333c0.381 0 0.667 0.286 0.667 0.667v21.333c0 0.381-0.286 0.667-0.667 0.667h-21.333c-0.381 0-0.667-0.286-0.667-0.667v-21.333c0-0.381 0.286-0.667 0.667-0.667zM27.333 6.667c-0.457 0-0.667 0.33-0.667 0.667s0.221 0.667 0.667 0.667h2.667c0.381 0 0.667 0.286 0.667 0.667v21.333c0 0.381-0.286 0.667-0.667 0.667h-21.333c-0.381 0-0.667-0.286-0.667-0.667v-2.667c0.006-0.451-0.33-0.667-0.667-0.667-0.342 0-0.673 0.216-0.667 0.667v2.667c0 1.096 0.904 2 2 2h21.333c1.096 0 2-0.904 2-2v-21.333c0-1.096-0.904-2-2-2z"></path>
+</svg></span>
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <h3 class="card-title mbr-bold mbr-fonts-style display-5">Labelbox</h3>
+
+                        <p class="card-text mbr-fonts-style mbr-pt-2 display-7">Labelbox is a data training platform that allowed us to label thousands of pictures of various currencies. We were able to create and assign different objects to each of the currencies.&nbsp;<br><br><br><br><br></p>
+                        <div class="card-btn mbr-section-btn mbr-pt-2"><a class="btn btn-lg btn-primary display-7" href="https://app.labelbox.com/" target="_blank">Labelbox</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mbr-col-sm-12 mbr-col-md-8 mbr-col-lg-4 align-center last-child">
+                <div class="card-wrapper mbr-flex mbr-column">
+                    <div class="card-img align-center mbr-pb-3">
+                        <div class="iconfont-wrapper">
+                            <span class="amp-iconfont mbri-browse"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32" fill="currentColor">
+
+<path d="M2 4c-1.096 0-2 0.904-2 2v20c0 1.096 0.904 2 2 2h28c1.096 0 2-0.904 2-2v-20c0-1.096-0.904-2-2-2h-28zM2 5.333h28c0.381 0 0.667 0.286 0.667 0.667v20c0 0.381-0.286 0.667-0.667 0.667h-28c-0.381 0-0.667-0.286-0.667-0.667v-20c0-0.381 0.286-0.667 0.667-0.667zM3.333 6.667c-0.368 0-0.667 0.298-0.667 0.667s0.298 0.667 0.667 0.667c0.368 0 0.667-0.298 0.667-0.667s-0.298-0.667-0.667-0.667zM6 6.667c-0.368 0-0.667 0.298-0.667 0.667s0.298 0.667 0.667 0.667c0.368 0 0.667-0.298 0.667-0.667s-0.298-0.667-0.667-0.667zM8.667 6.667c-0.368 0-0.667 0.298-0.667 0.667s0.298 0.667 0.667 0.667c0.368 0 0.667-0.298 0.667-0.667s-0.298-0.667-0.667-0.667zM3.333 9.333c-0.369 0-0.667 0.297-0.667 0.667s0.297 0.667 0.667 0.667h25.333c0.369 0 0.667-0.297 0.667-0.667s-0.297-0.667-0.667-0.667h-25.333z"></path>
+</svg></span>
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <h3 class="card-title mbr-bold mbr-fonts-style display-5">YOLO</h3>
+
+                        <p class="card-text mbr-fonts-style mbr-pt-2 display-7">YOLO is an object detection system which uses a set algorithm to detect objects and identify what they are. It was preferred over a convolutional neural network model because this system looks at the whole image at test time so its predictions are informed by global context in the image, making it much faster.&nbsp;<br><br></p>
+                        <div class="card-btn mbr-section-btn mbr-pt-2"><a class="btn btn-lg btn-primary display-7" href="https://pjreddie.com/darknet/yolo/" target="_blank">YOLO</a></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="footer2 cid-r89QzouNcO" id="footer1-2p">
+
+
+    <div class="footer-container container align-center">
+
+        <div class="copyright mbr-flex">
+            <p class="mbr-text mbr-fonts-style mbr-white display-7">© <span>2020</span> <span>hal9000</span></p>
+        </div>
+    </div>
+</section>
+
+    <script>
+        // added to get upload with a button working
+        document.getElementById('seefood_button').addEventListener('click', openDialog);
+
+        function openDialog() {
+            document.getElementById('seefood_input_field').click();
+        }
+    </script>
+
+
+</body>
+</html>
